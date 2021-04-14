@@ -12,8 +12,6 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      width: double.infinity,
-      height: double.infinity,
       child: Center(
         child: Image.asset(
           'assets/images/icon_virus_400x387.png',
