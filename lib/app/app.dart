@@ -1,4 +1,3 @@
-import 'package:desafio_covid/app/pages/page_splash.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -9,7 +8,6 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashPage(),
     );
   }
 }
