@@ -19,4 +19,8 @@ class Continent {
   final int todayDeaths;
   final int totalTests;
   final int population;
+
+  double get activeCasesRate => activeCases / totalCases * 100.0;
+  double get recoveredCasesRate => totalRecovered / totalCases * 100.0;
+  double get deathRate => totalDeaths / totalCases * 100.0;
 }
