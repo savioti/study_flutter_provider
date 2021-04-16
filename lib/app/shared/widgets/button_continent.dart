@@ -62,8 +62,10 @@ class ContinentButton extends StatelessWidget {
               color: Color(0xFF969AA8),
             ),
           ),
-          trailing: Image.asset(
-            'assets/images/arrow_control_small.png',
+          trailing: Icon(
+            Icons.arrow_forward_ios,
+            size: 16,
+            color: Color(0xFFCCCCCC),
           ),
         ),
       ),
