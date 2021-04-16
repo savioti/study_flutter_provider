@@ -23,6 +23,7 @@ class HomePage extends StatelessWidget {
         separatorBuilder: (_, i) {
           return Divider(
             height: 12.0,
+            color: Color(0x00000000),
           );
         },
       ),
