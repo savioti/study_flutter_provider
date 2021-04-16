@@ -38,9 +38,9 @@ class ContinentButton extends StatelessWidget {
           ),
           boxShadow: [
             BoxShadow(
-              color: Color(0x0000000D),
+              color: Color(0x1000000D),
               offset: Offset(0.0, 4.0),
-              spreadRadius: 3.0,
+              // spreadRadius: 3.0,
               blurRadius: 6.0,
             ),
           ],
