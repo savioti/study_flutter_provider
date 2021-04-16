@@ -1,3 +1,4 @@
+import 'package:desafio_covid/app/shared/models/country.dart';
 import 'package:flutter/material.dart';
 
 class Continent {
@@ -9,7 +10,8 @@ class Continent {
       @required this.todayCases,
       @required this.todayDeaths,
       @required this.totalTests,
-      @required this.population});
+      @required this.population,
+      @required this.countries});
 
   final int totalCases;
   final int activeCases;
@@ -19,6 +21,7 @@ class Continent {
   final int todayDeaths;
   final int totalTests;
   final int population;
+  final List<Country> countries;
 
   double get activeCasesRate => activeCases / totalCases * 100.0;
   double get recoveredCasesRate => totalRecovered / totalCases * 100.0;
