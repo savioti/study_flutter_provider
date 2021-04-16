@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ContinentButton extends StatelessWidget {
-  const ContinentButton({Key key, this.continentName, this.countriesCount})
+  const ContinentButton(
+      {Key key, @required this.continentName, @required this.countriesCount})
       : super(key: key);
 
   final String continentName;
