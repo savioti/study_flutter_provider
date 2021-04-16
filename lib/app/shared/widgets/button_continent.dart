@@ -39,10 +39,12 @@ class ContinentButton extends StatelessWidget {
         onPressed: () => {},
         child: ListTile(
           contentPadding: EdgeInsets.fromLTRB(0.0, 4.0, 0.0, 5.0),
-          leading: Image.asset(
-            _findContinentIcon(continentName),
-            width: 44.0,
-            height: 44.0,
+          leading: CircleAvatar(
+            backgroundColor: Colors.white,
+            radius: 22.0,
+            child: Image.asset(
+              _findContinentIcon(continentName),
+            ),
           ),
           title: Text(
             continentName,
