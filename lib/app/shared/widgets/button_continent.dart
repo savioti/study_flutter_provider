@@ -34,6 +34,7 @@ class ContinentButton extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.white),
+          elevation: MaterialStateProperty.all(0.0),
         ),
         onPressed: () => {},
         child: ListTile(
