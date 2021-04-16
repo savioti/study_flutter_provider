@@ -31,43 +31,68 @@ class ContinentButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ButtonTheme(
       minWidth: 345.0,
-      child: ElevatedButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.white),
-          elevation: MaterialStateProperty.all(0.0),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(
+            Radius.circular(4.0),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Color(0x0000000D),
+              offset: Offset(0.0, 4.0),
+              spreadRadius: 3.0,
+              blurRadius: 6.0,
+            ),
+          ],
         ),
-        onPressed: () => {},
-        child: ListTile(
-          contentPadding: EdgeInsets.fromLTRB(0.0, 4.0, 0.0, 5.0),
-          leading: CircleAvatar(
-            backgroundColor: Colors.white,
-            radius: 22.0,
-            child: Image.asset(
-              _findContinentIcon(continentName),
+        child: ElevatedButton(
+          style: ButtonStyle(
+            shadowColor: MaterialStateProperty.all(
+              Color(0x0000000D),
             ),
-          ),
-          title: Text(
-            continentName,
-            style: TextStyle(
-              fontFamily: 'Ubuntu',
-              fontStyle: FontStyle.normal,
-              fontSize: 13.0,
-              color: Color(0xFF1E2243),
+            backgroundColor: MaterialStateProperty.all(Colors.white),
+            shape: MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(4.0),
+                ),
+              ),
             ),
+            elevation: MaterialStateProperty.all(0.0),
           ),
-          subtitle: Text(
-            '$countriesCount países',
-            style: TextStyle(
-              fontFamily: 'Ubuntu',
-              fontStyle: FontStyle.normal,
-              fontSize: 12.0,
-              color: Color(0xFF969AA8),
+          onPressed: () => {},
+          child: ListTile(
+            contentPadding: EdgeInsets.fromLTRB(0.0, 4.0, 0.0, 5.0),
+            leading: CircleAvatar(
+              backgroundColor: Colors.white,
+              radius: 22.0,
+              child: Image.asset(
+                _findContinentIcon(continentName),
+              ),
             ),
-          ),
-          trailing: Icon(
-            Icons.arrow_forward_ios,
-            size: 16,
-            color: Color(0xFFCCCCCC),
+            title: Text(
+              continentName,
+              style: TextStyle(
+                fontFamily: 'Ubuntu',
+                fontStyle: FontStyle.normal,
+                fontSize: 13.0,
+                color: Color(0xFF1E2243),
+              ),
+            ),
+            subtitle: Text(
+              '$countriesCount países',
+              style: TextStyle(
+                fontFamily: 'Ubuntu',
+                fontStyle: FontStyle.normal,
+                fontSize: 12.0,
+                color: Color(0xFF969AA8),
+              ),
+            ),
+            trailing: Icon(
+              Icons.arrow_forward_ios,
+              size: 16,
+              color: Color(0xFFCCCCCC),
+            ),
           ),
         ),
       ),
