@@ -1,13 +1,16 @@
+import 'package:desafio_covid/app/pages/page_home.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Color(0xFFF3F4F9),
       ),
+      initialRoute: '/',
+      routes: {'/': (context) => HomePage()},
     );
   }
 }
