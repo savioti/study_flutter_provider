@@ -10,6 +10,13 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: const Color(0xFFFBFBFD),
       elevation: 0.0,
+      bottom: PreferredSize(
+        preferredSize: preferredSize,
+        child: Container(
+          height: 1.0,
+          color: Colors.white,
+        ),
+      ),
       title: Text(
         title,
         style: TextStyle(
