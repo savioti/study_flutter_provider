@@ -60,7 +60,7 @@ class ContinentButton extends StatelessWidget {
           ),
           onPressed: () => {},
           child: ListTile(
-            contentPadding: EdgeInsets.fromLTRB(0.0, 4.0, 0.0, 5.0),
+            contentPadding: EdgeInsets.fromLTRB(0.0, 3.0, 0.0, 4.0),
             leading: CircleAvatar(
               backgroundColor: Colors.white,
               radius: 22.0,
