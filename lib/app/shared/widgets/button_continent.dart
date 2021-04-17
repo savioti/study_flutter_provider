@@ -1,12 +1,10 @@
+import 'package:desafio_covid/app/shared/models/continent.dart';
 import 'package:flutter/material.dart';
 
 class ContinentButton extends StatelessWidget {
-  const ContinentButton(
-      {Key key, @required this.continentName, @required this.countriesCount})
-      : super(key: key);
+  const ContinentButton({Key key, @required this.continent}) : super(key: key);
 
-  final String continentName;
-  final int countriesCount;
+  final Continent continent;
 
   String _findContinentIcon(String name) {
     switch (name) {
@@ -67,11 +65,11 @@ class ContinentButton extends StatelessWidget {
               backgroundColor: Colors.white,
               radius: 22.0,
               child: Image.asset(
-                _findContinentIcon(continentName),
+                _findContinentIcon(continent.name),
               ),
             ),
             title: Text(
-              continentName,
+              continent.name,
               style: TextStyle(
                 fontFamily: 'Ubuntu',
                 fontStyle: FontStyle.normal,
@@ -80,7 +78,7 @@ class ContinentButton extends StatelessWidget {
               ),
             ),
             subtitle: Text(
-              '$countriesCount países',
+              '${continent.countriesNames.length} países',
               style: TextStyle(
                 fontFamily: 'Ubuntu',
                 fontStyle: FontStyle.normal,
