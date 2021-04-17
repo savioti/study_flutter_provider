@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const HomeAppBar({Key key, @required this.title}) : super(key: key);
+class IconAndSeparatorAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
+  const IconAndSeparatorAppBar({Key key, @required this.title})
+      : super(key: key);
 
   final String title;
 
