@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-class IconAndSeparatorAppBar extends StatelessWidget
-    implements PreferredSizeWidget {
-  const IconAndSeparatorAppBar({Key key, @required this.title})
-      : super(key: key);
+class NoIconAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const NoIconAppBar({Key key, @required this.title}) : super(key: key);
 
   final String title;
 
@@ -29,9 +27,7 @@ class IconAndSeparatorAppBar extends StatelessWidget
         ),
       ),
       centerTitle: true,
-      leading: Image.asset(
-        'assets/images/icon_virus_30x29.png',
-      ),
+      automaticallyImplyLeading: false,
     );
   }
 

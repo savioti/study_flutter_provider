@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SeperatorAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const SeperatorAppBar({Key key, @required this.title}) : super(key: key);
+class NoIconAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const NoIconAppBar({Key key, @required this.title}) : super(key: key);
 
   final String title;
 
@@ -10,12 +10,8 @@ class SeperatorAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: const Color(0xFFFBFBFD),
       elevation: 0.0,
-      bottom: PreferredSize(
-        preferredSize: preferredSize,
-        child: Container(
-          height: 1.0,
-          color: Colors.white,
-        ),
+      bottom: TabBar(
+        tabs: [],
       ),
       title: Text(
         title,

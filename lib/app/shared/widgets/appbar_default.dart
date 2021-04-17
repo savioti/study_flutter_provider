@@ -26,8 +26,10 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: Color(0xFF1E2243),
         ),
       ),
-      centerTitle: false,
-      automaticallyImplyLeading: false,
+      centerTitle: true,
+      leading: Image.asset(
+        'assets/images/icon_virus_30x29.png',
+      ),
     );
   }
 
