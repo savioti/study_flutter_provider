@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 class CenterErrorText extends StatelessWidget {
   const CenterErrorText({
     Key key,
+    @required this.errorMessage,
   }) : super(key: key);
+
+  final String errorMessage;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +30,7 @@ class CenterErrorText extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Erro: nenhum continente selecionado',
+            errorMessage,
             style: TextStyle(
               fontFamily: 'Ubuntu',
               fontSize: 16.0,
