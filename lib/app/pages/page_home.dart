@@ -28,8 +28,11 @@ class HomePage extends StatelessWidget {
       body: FutureBuilder<List<Continent>>(
           future: _httpGet(),
           builder: (_, snapshot) {
-            var continents = snapshot.data;
-            return ContinentsList(continents: continents);
+            return snapshot.hasData
+                ? ContinentsList(continents: snapshot.data)
+                : Center(
+                    child: CircularProgressIndicator(),
+                  );
           }),
     );
   }
@@ -47,8 +50,7 @@ class ContinentsList extends StatelessWidget {
       itemCount: continents.length,
       itemBuilder: (_, i) {
         return ContinentButton(
-          countriesCount: continents[i].countriesNames.length,
-          continentName: continents[i].name,
+          continent: continents[i],
         );
       },
       separatorBuilder: (_, i) {
