@@ -1,5 +1,6 @@
 import 'package:desafio_covid/app/shared/models/continent.dart';
 import 'package:desafio_covid/app/shared/widgets/appbar_no_icon.dart';
+import 'package:desafio_covid/app/shared/widgets/button_return.dart';
 import 'package:desafio_covid/app/shared/widgets/center_error_text.dart';
 import 'package:flutter/material.dart';
 
@@ -49,16 +50,7 @@ class ContinentOverviewPage extends StatelessWidget {
           elevation: 0.0,
           leadingWidth: 36.0,
           automaticallyImplyLeading: false,
-          leading: Navigator.canPop(context)
-              ? IconButton(
-                  // TODO: deixar setinha "grossa"
-                  icon: const Icon(Icons.arrow_back_ios_rounded),
-                  onPressed: () => Navigator.of(context).pop(),
-                  iconSize: 19.0,
-                  color: Color(0xFF1E2243),
-                  padding: const EdgeInsets.fromLTRB(25.0, 19.0, 0.0, 72.0),
-                )
-              : null,
+          leading: Navigator.canPop(context) ? ReturnButton() : null,
           title: Text(
             continent.name.toString(),
             style: TextStyle(
