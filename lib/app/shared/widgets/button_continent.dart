@@ -58,7 +58,10 @@ class ContinentButton extends StatelessWidget {
             ),
             elevation: MaterialStateProperty.all(0.0),
           ),
-          onPressed: () => {},
+          onPressed: () => {
+            Navigator.pushNamed(context, '/continent_overview',
+                arguments: continent),
+          },
           child: ListTile(
             contentPadding: EdgeInsets.fromLTRB(0.0, 3.0, 0.0, 4.0),
             leading: CircleAvatar(
