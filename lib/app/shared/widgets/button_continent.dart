@@ -14,7 +14,6 @@ class ContinentButton extends StatelessWidget {
       minWidth: 345.0,
       child: Container(
         decoration: WhiteBoxDecorationWithShadow.buildBoxDecoration(),
-        // TODO: extrair widget
         child: ElevatedButton(
           style: ButtonStyle(
             shadowColor: MaterialStateProperty.all(
