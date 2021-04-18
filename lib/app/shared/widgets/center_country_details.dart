@@ -26,8 +26,8 @@ class CountryDetails extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    'assets/images/icon_asia_44x44.png',
+                  Image.network(
+                    country.flagLink,
                     width: 210.0,
                     height: 140.0,
                     fit: BoxFit.fill,
