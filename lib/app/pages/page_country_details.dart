@@ -1,8 +1,6 @@
 import 'package:desafio_covid/app/shared/models/country.dart';
 import 'package:desafio_covid/app/shared/widgets/button_return.dart';
 import 'package:desafio_covid/app/shared/widgets/center_country_details.dart';
-import 'package:desafio_covid/app/shared/widgets/text_labeled_value.dart';
-import 'package:desafio_covid/app/shared/widgets/text_title.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
