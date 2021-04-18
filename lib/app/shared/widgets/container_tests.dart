@@ -1,3 +1,4 @@
+import 'package:desafio_covid/app/shared/models/continent.dart';
 import 'package:desafio_covid/app/shared/widgets/text_labeled_value.dart';
 import 'package:desafio_covid/app/shared/widgets/text_title.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +6,10 @@ import 'package:flutter/material.dart';
 class TestsContainer extends StatelessWidget {
   const TestsContainer({
     Key key,
+    @required this.continent,
   }) : super(key: key);
+
+  final Continent continent;
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +33,11 @@ class TestsContainer extends StatelessWidget {
             children: [
               LabeledValueText(
                 labelText: 'Realizados',
-                valueText: '30000',
+                valueText: continent.totalTests.toString(),
               ),
               LabeledValueText(
                 labelText: 'População',
-                valueText: '100000',
+                valueText: continent.population.toString(),
               ),
             ],
           ),

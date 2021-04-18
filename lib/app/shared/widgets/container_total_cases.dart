@@ -1,3 +1,4 @@
+import 'package:desafio_covid/app/shared/models/continent.dart';
 import 'package:desafio_covid/app/shared/widgets/text_labeled_value.dart';
 import 'package:desafio_covid/app/shared/widgets/text_title.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +6,10 @@ import 'package:flutter/material.dart';
 class TotalCasesContainer extends StatelessWidget {
   const TotalCasesContainer({
     Key key,
+    @required this.continent,
   }) : super(key: key);
+
+  final Continent continent;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +33,7 @@ class TotalCasesContainer extends StatelessWidget {
             children: [
               LabeledValueText(
                 labelText: 'Total de Casos',
-                valueText: 'teste',
+                valueText: continent.totalCases.toString(),
               ),
             ],
           ),
@@ -38,7 +42,7 @@ class TotalCasesContainer extends StatelessWidget {
             children: [
               LabeledValueText(
                 labelText: 'Ativos',
-                valueText: '27%',
+                valueText: '${continent.activeCasesRate.toStringAsFixed(0)}%',
                 valueFontSize: 22.0,
                 valueFontColor: Color(0xFF4461C2),
                 valueFontWeight: FontWeight.bold,
@@ -46,7 +50,8 @@ class TotalCasesContainer extends StatelessWidget {
               ),
               LabeledValueText(
                 labelText: 'Curados',
-                valueText: '27%',
+                valueText:
+                    '${continent.recoveredCasesRate.toStringAsFixed(0)}%',
                 valueFontSize: 22.0,
                 valueFontColor: Color(0xFF5FD92B),
                 valueFontWeight: FontWeight.bold,
@@ -54,7 +59,7 @@ class TotalCasesContainer extends StatelessWidget {
               ),
               LabeledValueText(
                 labelText: 'Óbitos',
-                valueText: '27%',
+                valueText: '${continent.deathRate.toStringAsFixed(0)}%',
                 valueFontSize: 22.0,
                 valueFontColor: Color(0xFFFF2665),
                 valueFontWeight: FontWeight.bold,

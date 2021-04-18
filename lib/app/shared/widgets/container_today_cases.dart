@@ -1,3 +1,4 @@
+import 'package:desafio_covid/app/shared/models/continent.dart';
 import 'package:desafio_covid/app/shared/widgets/text_labeled_value.dart';
 import 'package:desafio_covid/app/shared/widgets/text_title.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +6,10 @@ import 'package:flutter/material.dart';
 class TodayCasesContainer extends StatelessWidget {
   const TodayCasesContainer({
     Key key,
+    @required this.continent,
   }) : super(key: key);
+
+  final Continent continent;
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +33,11 @@ class TodayCasesContainer extends StatelessWidget {
             children: [
               LabeledValueText(
                 labelText: 'Casos',
-                valueText: '+ 50000',
+                valueText: '+ ${continent.todayCases}',
               ),
               LabeledValueText(
                 labelText: 'Óbitos',
-                valueText: '- 1000',
+                valueText: '- ${continent.todayDeaths}',
                 valueFontColor: Color(0xFFFF2665),
               ),
             ],

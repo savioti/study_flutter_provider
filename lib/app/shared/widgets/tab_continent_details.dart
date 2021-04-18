@@ -1,3 +1,4 @@
+import 'package:desafio_covid/app/shared/models/continent.dart';
 import 'package:desafio_covid/app/shared/widgets/container_tests.dart';
 import 'package:desafio_covid/app/shared/widgets/container_today_cases.dart';
 import 'package:desafio_covid/app/shared/widgets/container_total_cases.dart';
@@ -7,7 +8,10 @@ import 'package:flutter/material.dart';
 class ContinentDetailsTab extends StatelessWidget {
   const ContinentDetailsTab({
     Key key,
+    @required this.continent,
   }) : super(key: key);
+
+  final Continent continent;
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +21,17 @@ class ContinentDetailsTab extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          TotalCasesContainer(),
+          TotalCasesContainer(
+            continent: continent,
+          ),
           SeparatorRow(),
-          TodayCasesContainer(),
+          TodayCasesContainer(
+            continent: continent,
+          ),
           SeparatorRow(),
-          TestsContainer(),
+          TestsContainer(
+            continent: continent,
+          ),
         ],
       ),
     );
