@@ -31,7 +31,10 @@ class HomePage extends StatelessWidget {
             return snapshot.hasData
                 ? ContinentsList(continents: snapshot.data)
                 : Center(
-                    child: CircularProgressIndicator(),
+                    child: CircularProgressIndicator(
+                      valueColor:
+                          AlwaysStoppedAnimation<Color>(Color(0xFF1E2243)),
+                    ),
                   );
           }),
     );
