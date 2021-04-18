@@ -1,3 +1,4 @@
+import 'package:desafio_covid/app/pages/page_continent_overview.dart';
 import 'package:desafio_covid/app/pages/page_home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -9,8 +10,11 @@ class App extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Color(0xFFF3F4F9),
       ),
-      initialRoute: '/',
-      routes: {'/': (context) => HomePage()},
+      initialRoute: '/continent_overview',
+      routes: {
+        '/': (context) => HomePage(),
+        '/continent_overview': (context) => ContinentOverviewPage(),
+      },
     );
   }
 }

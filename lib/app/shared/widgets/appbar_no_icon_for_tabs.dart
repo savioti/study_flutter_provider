@@ -9,7 +9,30 @@ class NoIconAppBarWithTabBar extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          bottom: TabBar(
+            tabs: [
+              Tab(
+                child: Text(
+                  'Detalhes',
+                  style: TextStyle(),
+                ),
+              ),
+              Tab(
+                child: Text(
+                  'Países',
+                  style: TextStyle(),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    )
+    AppBar(
       backgroundColor: const Color(0xFFFBFBFD),
       elevation: 0.0,
       bottom: TabBar(
