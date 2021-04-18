@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-class NoIconAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const NoIconAppBar({Key key, @required this.title}) : super(key: key);
+class NoIconAppBarWithTabBar extends StatelessWidget
+    implements PreferredSizeWidget {
+  const NoIconAppBarWithTabBar({Key key, @required this.title})
+      : super(key: key);
 
   final String title;
 
