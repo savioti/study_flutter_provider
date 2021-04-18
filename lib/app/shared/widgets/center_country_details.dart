@@ -1,5 +1,5 @@
 import 'package:desafio_covid/app/shared/models/country.dart';
-import 'package:desafio_covid/app/shared/widgets/boxdecoration_white_with_shadow.dart';
+import 'package:desafio_covid/app/shared/widgets/container_country_flag.dart';
 import 'package:desafio_covid/app/shared/widgets/row_cases_rates.dart';
 import 'package:desafio_covid/app/shared/widgets/text_labeled_value.dart';
 import 'package:desafio_covid/app/shared/widgets/text_title.dart';
@@ -66,25 +66,7 @@ class CountryDetails extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  decoration: WhiteBoxDecorationWithShadow.buildBoxDecoration(),
-                  child: Container(
-                    width: 210,
-                    height: 140,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(4.0),
-                      ),
-                      image: DecorationImage(
-                        image: NetworkImage(
-                          country.flagLink,
-                        ),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                ),
+                CountryFlagContainer(country: country),
               ],
             ),
           ),
