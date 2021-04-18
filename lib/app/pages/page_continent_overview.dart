@@ -22,6 +22,14 @@ class ContinentOverviewPage extends StatelessWidget {
       continent.todayDeaths = 666;
       continent.totalTests = 300000;
       continent.population = 1000000;
+      continent.countriesNames = [
+        'Japão',
+        'China',
+        'Indonésia',
+        'Taiwan',
+        'ìndia',
+        'Afeganistão'
+      ];
     }
 
     if (continent == null) {
