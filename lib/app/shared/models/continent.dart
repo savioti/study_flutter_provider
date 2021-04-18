@@ -11,7 +11,8 @@ class Continent {
     todayDeaths = json['todayDeaths'];
     totalTests = json['tests'];
     population = json['population'];
-    countriesNames = json['countries'];
+    var countries = json['countries'];
+    countriesNames = List.from(countries);
   }
 
   String name;
@@ -23,7 +24,7 @@ class Continent {
   int todayDeaths;
   int totalTests;
   int population;
-  List countriesNames;
+  List<String> countriesNames;
 
   double get activeCasesRate => activeCases / totalCases * 100.0;
   double get recoveredCasesRate => totalRecovered / totalCases * 100.0;
