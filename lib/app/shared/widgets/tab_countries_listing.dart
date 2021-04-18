@@ -33,8 +33,7 @@ class CountriesListingTab extends StatelessWidget {
             ),
             child: ElevatedButton(
               style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.all(Colors.white),
+                backgroundColor: MaterialStateProperty.all(Colors.white),
                 shape: MaterialStateProperty.all(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
@@ -44,10 +43,15 @@ class CountriesListingTab extends StatelessWidget {
                 ),
                 elevation: MaterialStateProperty.all(0.0),
               ),
-              onPressed: () => {},
+              onPressed: () => {
+                Navigator.pushNamed(
+                  context,
+                  '/country_details',
+                  arguments: continent.countriesNames[i],
+                )
+              },
               child: ListTile(
-                contentPadding:
-                    EdgeInsets.fromLTRB(11.0, 3.0, 0.0, 4.0),
+                contentPadding: EdgeInsets.fromLTRB(11.0, 3.0, 0.0, 4.0),
                 leading: Text(
                   continent.countriesNames[i],
                   style: TextStyle(
