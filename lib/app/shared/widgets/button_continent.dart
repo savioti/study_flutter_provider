@@ -1,4 +1,5 @@
 import 'package:desafio_covid/app/shared/models/continent.dart';
+import 'package:desafio_covid/app/shared/widgets/boxdecoration_white_with_shadow.dart';
 import 'package:flutter/material.dart';
 
 class ContinentButton extends StatelessWidget {
@@ -30,20 +31,7 @@ class ContinentButton extends StatelessWidget {
     return ButtonTheme(
       minWidth: 345.0,
       child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(
-            Radius.circular(4.0),
-          ),
-          boxShadow: [
-            // TODO: extrair widget
-            BoxShadow(
-              color: Color(0x1000000D),
-              offset: Offset(0.0, 4.0),
-              // spreadRadius: 3.0,
-              blurRadius: 6.0,
-            ),
-          ],
-        ),
+        decoration: WhiteBoxDecorationWithShadow.buildBoxDecoration(),
         // TODO: extrair widget
         child: ElevatedButton(
           style: ButtonStyle(

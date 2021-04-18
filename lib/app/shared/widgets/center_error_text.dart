@@ -1,3 +1,4 @@
+import 'package:desafio_covid/app/shared/widgets/boxdecoration_white_with_shadow.dart';
 import 'package:flutter/material.dart';
 
 class CenterErrorText extends StatelessWidget {
@@ -14,21 +15,7 @@ class CenterErrorText extends StatelessWidget {
       child: Container(
         width: 345.0,
         height: 55.0,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.all(
-            Radius.circular(4.0),
-          ),
-          boxShadow: [
-            // TODO: extrair widget
-            BoxShadow(
-              color: Color(0x1000000D),
-              offset: Offset(0.0, 4.0),
-              // spreadRadius: 3.0,
-              blurRadius: 6.0,
-            ),
-          ],
-        ),
+        decoration: WhiteBoxDecorationWithShadow.buildBoxDecoration(),
         child: Center(
           child: Text(
             errorMessage,
