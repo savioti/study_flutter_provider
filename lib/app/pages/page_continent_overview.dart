@@ -4,7 +4,6 @@ import 'package:desafio_covid/app/shared/widgets/button_return.dart';
 import 'package:desafio_covid/app/shared/widgets/center_error_text.dart';
 import 'package:desafio_covid/app/shared/widgets/tab_continent_details.dart';
 import 'package:desafio_covid/app/shared/widgets/tab_countries_listing.dart';
-import 'package:desafio_covid/app/shared/widgets/text_title.dart';
 import 'package:flutter/material.dart';
 
 class ContinentOverviewPage extends StatelessWidget {
@@ -12,32 +11,7 @@ class ContinentOverviewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: mudar para final
-    Continent continent = ModalRoute.of(context).settings.arguments;
-
-    if (continent == null) {
-      continent = Continent();
-      continent.name = 'Asia';
-      continent.totalCases = 999999;
-      continent.activeCases = 1000;
-      continent.totalRecovered = 55555;
-      continent.totalDeaths = 666666;
-      continent.todayCases = 800;
-      continent.todayDeaths = 666;
-      continent.totalTests = 300000;
-      continent.population = 1000000;
-      continent.countriesNames = [
-        'Japão',
-        'China',
-        'Indonésia',
-        'Taiwan',
-        'Índia',
-        'Afeganistão',
-        'Síria',
-        'Armenia',
-        'Georgia'
-      ];
-    }
+    final Continent continent = ModalRoute.of(context).settings.arguments;
 
     if (continent == null) {
       return Scaffold(

@@ -18,12 +18,7 @@ class CountryDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: transformar em final e remover placeholder
-    String countryName = ModalRoute.of(context).settings.arguments;
-
-    if (countryName == null) {
-      countryName = 'Brazil';
-    }
+    final String countryName = ModalRoute.of(context).settings.arguments;
 
     return Scaffold(
         appBar: AppBar(
