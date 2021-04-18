@@ -9,7 +9,7 @@ class WhiteBoxDecorationWithShadow {
       ),
       boxShadow: [
         BoxShadow(
-          color: Color(0x1000000D),
+          color: Color(0x1500000D),
           offset: Offset(0.0, 4.0),
           blurRadius: 6.0,
         ),
