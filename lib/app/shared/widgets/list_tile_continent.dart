@@ -1,4 +1,5 @@
 import 'package:desafio_covid/app/shared/models/continent.dart';
+import 'package:desafio_covid/app/shared/widgets/icon_arrow_forward.dart';
 import 'package:flutter/material.dart';
 
 class ContinentListTile extends StatelessWidget {
@@ -57,12 +58,7 @@ class ContinentListTile extends StatelessWidget {
           color: Color(0xFF969AA8),
         ),
       ),
-      // TODO: extrair widget
-      trailing: Icon(
-        Icons.arrow_forward_ios,
-        size: 16,
-        color: Color(0xFFCCCCCC),
-      ),
+      trailing: ArrowForwardIcon(),
     );
   }
 }
