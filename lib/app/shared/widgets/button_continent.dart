@@ -78,7 +78,7 @@ class ContinentButton extends StatelessWidget {
               ),
             ),
             subtitle: Text(
-              '${continent.countriesNames.length} países',
+              '${continent.countriesCount} países',
               style: TextStyle(
                 fontFamily: 'Ubuntu',
                 fontStyle: FontStyle.normal,

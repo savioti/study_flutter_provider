@@ -26,4 +26,5 @@ class Continent {
   double get activeCasesRate => activeCases / totalCases * 100.0;
   double get recoveredCasesRate => totalRecovered / totalCases * 100.0;
   double get deathRate => totalDeaths / totalCases * 100.0;
+  int get countriesCount => countriesNames.length;
 }
