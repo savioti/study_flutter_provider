@@ -1,4 +1,5 @@
 import 'package:desafio_covid/app/shared/widgets/text_labeled_value.dart';
+import 'package:desafio_covid/app/shared/widgets/text_title.dart';
 import 'package:flutter/material.dart';
 
 class ContinentDetailsTab extends StatelessWidget {
@@ -25,14 +26,8 @@ class ContinentDetailsTab extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            'Total',
-                            style: TextStyle(
-                              fontFamily: 'Ubuntu',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16.0,
-                              color: Color(0xFF1E2243),
-                            ),
+                          TitleText(
+                            text: 'Total',
                           ),
                         ],
                       ),
@@ -91,14 +86,8 @@ class ContinentDetailsTab extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            'Hoje',
-                            style: TextStyle(
-                              fontFamily: 'Ubuntu',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16.0,
-                              color: Color(0xFF1E2243),
-                            ),
+                          TitleText(
+                            text: 'Hoje',
                           ),
                         ],
                       ),
@@ -133,14 +122,8 @@ class ContinentDetailsTab extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            'Testes',
-                            style: TextStyle(
-                              fontFamily: 'Ubuntu',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16.0,
-                              color: Color(0xFF1E2243),
-                            ),
+                          TitleText(
+                            text: 'Testes',
                           ),
                         ],
                       ),
