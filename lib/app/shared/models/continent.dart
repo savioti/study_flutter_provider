@@ -1,4 +1,6 @@
 class Continent {
+  Continent();
+
   Continent.fromJson(Map<String, dynamic> json) {
     name = json['continent'];
     totalCases = json['cases'];
