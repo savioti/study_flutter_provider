@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
 
 class NoIconAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const NoIconAppBar({Key key, @required this.title}) : super(key: key);
+  const NoIconAppBar({Key key, @required this.title, this.tabBar})
+      : super(key: key);
 
   final String title;
+  final TabBar tabBar;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: const Color(0xFFFBFBFD),
       elevation: 0.0,
-      bottom: PreferredSize(
-        preferredSize: preferredSize,
-        child: Container(
-          height: 1.0,
-          color: Colors.white,
-        ),
-      ),
+      bottom: tabBar == null
+          ? PreferredSize(
+              preferredSize: preferredSize,
+              child: Container(
+                height: 1.0,
+                color: Colors.white,
+              ),
+            )
+          : tabBar,
       title: Text(
         title,
         style: TextStyle(
@@ -26,7 +30,6 @@ class NoIconAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: Color(0xFF1E2243),
         ),
       ),
-      centerTitle: true,
       automaticallyImplyLeading: false,
     );
   }
