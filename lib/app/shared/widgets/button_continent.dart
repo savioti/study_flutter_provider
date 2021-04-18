@@ -35,6 +35,7 @@ class ContinentButton extends StatelessWidget {
             Radius.circular(4.0),
           ),
           boxShadow: [
+            // TODO: extrair widget
             BoxShadow(
               color: Color(0x1000000D),
               offset: Offset(0.0, 4.0),
@@ -43,6 +44,7 @@ class ContinentButton extends StatelessWidget {
             ),
           ],
         ),
+        // TODO: extrair widget
         child: ElevatedButton(
           style: ButtonStyle(
             shadowColor: MaterialStateProperty.all(
@@ -62,6 +64,7 @@ class ContinentButton extends StatelessWidget {
             Navigator.pushNamed(context, '/continent_overview',
                 arguments: continent),
           },
+          // TODO: extrair widget
           child: ListTile(
             contentPadding: EdgeInsets.fromLTRB(0.0, 3.0, 0.0, 4.0),
             leading: CircleAvatar(
@@ -89,6 +92,7 @@ class ContinentButton extends StatelessWidget {
                 color: Color(0xFF969AA8),
               ),
             ),
+            // TODO: extrair widget
             trailing: Icon(
               Icons.arrow_forward_ios,
               size: 16,

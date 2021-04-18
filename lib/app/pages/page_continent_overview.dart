@@ -25,6 +25,8 @@ class ContinentOverviewPage extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        // TODO: extrair a appbar e tentar adaptá-la a classe NoIconAppBar
+        // TODO: desenhar uma linha de 1px abaixo da tab bar
         appBar: AppBar(
           backgroundColor: const Color(0xFFFBFBFD),
           elevation: 0.0,

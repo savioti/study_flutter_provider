@@ -11,6 +11,8 @@ class CountriesListingTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: adicionar campo de busca por país
+    // TODO: Usar provider pra mostrar elementos da busca
     return ListView.separated(
       padding: EdgeInsets.fromLTRB(14.5, 19.5, 14.5, 19.5),
       itemCount: continent.countriesCount,
@@ -23,6 +25,7 @@ class CountriesListingTab extends StatelessWidget {
                 Radius.circular(4.0),
               ),
               boxShadow: [
+                // TODO: extrair widget
                 BoxShadow(
                   color: Color(0x0700000D),
                   offset: Offset(0.0, 4.0),

@@ -26,6 +26,10 @@ class CountryDetails extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // TODO: fazer imagem dar um overflow no container
+                  // talvez usar o container dentro de uma sized box
+                  // talvez usar Stack( clipBehavior: Clip.none) e
+                  // posicionar uma coluna com MainAxisAlignment.start
                   Image.network(
                     country.flagLink,
                     width: 210.0,
@@ -52,6 +56,7 @@ class CountryDetails extends StatelessWidget {
                   )
                 ],
               ),
+              // TODO: extrair widget
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [

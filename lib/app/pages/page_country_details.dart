@@ -24,6 +24,8 @@ class CountryDetailsPage extends StatelessWidget {
     final String countryName = ModalRoute.of(context).settings.arguments;
 
     return Scaffold(
+        // TODO: extrair a appbar e tentar adaptá-la a classe NoIconAppBar
+        // TODO: desenhar uma linha de 1px abaixo da tab bar
         appBar: AppBar(
           backgroundColor: const Color(0xFFFBFBFD),
           elevation: 0.0,

@@ -20,6 +20,7 @@ class CenterErrorText extends StatelessWidget {
             Radius.circular(4.0),
           ),
           boxShadow: [
+            // TODO: extrair widget
             BoxShadow(
               color: Color(0x1000000D),
               offset: Offset(0.0, 4.0),
