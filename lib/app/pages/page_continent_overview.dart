@@ -44,11 +44,11 @@ class ContinentOverviewPage extends StatelessWidget {
           leading: Navigator.canPop(context)
               ? IconButton(
                   // TODO: deixar setinha "grossa"
-                  icon: const Icon(Icons.arrow_back_ios),
+                  icon: const Icon(Icons.arrow_back_ios_rounded),
                   onPressed: () => Navigator.of(context).pop(),
-                  iconSize: 20.0,
+                  iconSize: 19.0,
                   color: Color(0xFF1E2243),
-                  padding: const EdgeInsets.fromLTRB(25.0, 19.0, 14.0, 72.0),
+                  padding: const EdgeInsets.fromLTRB(25.0, 19.0, 0.0, 72.0),
                 )
               : null,
           title: Text(
@@ -56,7 +56,7 @@ class ContinentOverviewPage extends StatelessWidget {
             style: TextStyle(
               fontFamily: 'Ubuntu',
               fontWeight: FontWeight.bold,
-              fontSize: 18.0,
+              fontSize: 16.0,
               color: Color(0xFF1E2243),
             ),
           ),
