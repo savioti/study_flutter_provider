@@ -1,3 +1,4 @@
+import 'package:desafio_covid/app/shared/widgets/row_separator.dart';
 import 'package:desafio_covid/app/shared/widgets/text_labeled_value.dart';
 import 'package:desafio_covid/app/shared/widgets/text_title.dart';
 import 'package:flutter/material.dart';
@@ -75,13 +76,7 @@ class ContinentDetailsTab extends StatelessWidget {
               )
             ],
           ),
-          Row(
-            children: [
-              SizedBox(
-                height: 25.0,
-              )
-            ],
-          ),
+          SeparatorRow(),
           Row(
             children: [
               Container(
@@ -118,13 +113,7 @@ class ContinentDetailsTab extends StatelessWidget {
               )
             ],
           ),
-          Row(
-            children: [
-              SizedBox(
-                height: 25.0,
-              )
-            ],
-          ),
+          SeparatorRow(),
           Row(
             children: [
               Container(
