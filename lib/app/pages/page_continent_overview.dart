@@ -2,6 +2,7 @@ import 'package:desafio_covid/app/shared/models/continent.dart';
 import 'package:desafio_covid/app/shared/widgets/appbar_no_icon.dart';
 import 'package:desafio_covid/app/shared/widgets/button_return.dart';
 import 'package:desafio_covid/app/shared/widgets/center_error_text.dart';
+import 'package:desafio_covid/app/shared/widgets/tab_continent_details.dart';
 import 'package:flutter/material.dart';
 
 class ContinentOverviewPage extends StatelessWidget {
@@ -88,6 +89,12 @@ class ContinentOverviewPage extends StatelessWidget {
               ),
             ],
           ),
+        ),
+        body: TabBarView(
+          children: [
+            ContinentDetailsTab(),
+            Column(),
+          ],
         ),
       ),
     );
