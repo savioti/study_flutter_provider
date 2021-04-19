@@ -33,12 +33,8 @@ class _CountriesListingTabState extends State<CountriesListingTab> {
       children: [
         SearchField(
           currentInput: currentInput,
-          padding: const EdgeInsets.symmetric(horizontal: 14.5, vertical: 14.5),
           onValueChanged: _filterResults,
           hintText: 'Procurar por países...',
-          hintFontSize: 15.0,
-          hintFontFamily: 'Ubuntu',
-          hintFontColor: const Color(0xFF969AA8),
         ),
         Consumer<CountriesListingProvider>(
           builder: (__, value, ___) {
