@@ -12,7 +12,7 @@ class ReturnButton extends StatelessWidget {
       onPressed: () => Navigator.of(context).pop(),
       iconSize: 19.0,
       color: Color(0xFF1E2243),
-      padding: const EdgeInsets.fromLTRB(25.0, 19.0, 0.0, 72.0),
+      padding: const EdgeInsets.fromLTRB(25.0, 19.0, 2.0, 72.0),
     );
   }
 }

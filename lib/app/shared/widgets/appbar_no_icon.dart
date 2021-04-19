@@ -1,3 +1,4 @@
+import 'package:desafio_covid/app/shared/widgets/button_return.dart';
 import 'package:flutter/material.dart';
 
 class NoIconAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -30,6 +31,8 @@ class NoIconAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: Color(0xFF1E2243),
         ),
       ),
+      leading: Navigator.canPop(context) ? ReturnButton() : null,
+      leadingWidth: 36.0,
       automaticallyImplyLeading: false,
     );
   }
