@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SearchField extends StatefulWidget {
+class SearchField extends StatelessWidget {
   SearchField({
     Key key,
     @required this.currentInput,
@@ -23,37 +23,31 @@ class SearchField extends StatefulWidget {
   final EdgeInsetsGeometry padding;
 
   @override
-  _SearchFieldState createState() => _SearchFieldState();
-}
-
-class _SearchFieldState extends State<SearchField> {
-  final _controller = TextEditingController();
-
-  @override
   Widget build(BuildContext context) {
+    final _controller = TextEditingController();
     return Padding(
-      padding: widget.padding,
+      padding: padding,
       child: TextField(
         controller: _controller,
-        onChanged: widget.onValueChanged,
+        onChanged: onValueChanged,
         decoration: InputDecoration(
-          hintText: widget.hintText,
+          hintText: hintText,
           border: OutlineInputBorder(),
           prefixIcon: Icon(
             Icons.search_rounded,
-            color: widget.currentInput.isNotEmpty
+            color: currentInput.isNotEmpty
                 ? const Color(0xFF4461C2)
                 : const Color(0xFF969AA8),
           ),
-          focusColor: widget.focusColor,
+          focusColor: focusColor,
           hintStyle: TextStyle(
-            color: widget.hintFontColor,
-            fontFamily: widget.hintFontFamily,
-            fontSize: widget.hintFontSize,
+            color: hintFontColor,
+            fontFamily: hintFontFamily,
+            fontSize: hintFontSize,
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: widget.focusColor,
+              color: focusColor,
               width: 2.0,
             ),
           ),
