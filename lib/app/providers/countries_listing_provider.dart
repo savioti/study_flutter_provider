@@ -36,6 +36,10 @@ class CountriesListingProvider with ChangeNotifier {
   }
 
   void _validateFullList(List<String> fullList) {
-    if (this.fullList == null) this.fullList = fullList;
+    if ((this.fullList == null) ||
+        (this.fullList[0].compareTo(fullList[0]) != 0)) {
+      this.fullList = fullList;
+      filteredList.clear();
+    }
   }
 }
