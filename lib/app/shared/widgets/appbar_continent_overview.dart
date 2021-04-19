@@ -12,7 +12,7 @@ class ContinentOverviewAppBar extends StatelessWidget
   final Continent continent;
 
   @override
-  Size get preferredSize => Size(double.infinity, 53.0);
+  Size get preferredSize => Size(double.infinity, 108.0);
 
   @override
   Widget build(BuildContext context) {
