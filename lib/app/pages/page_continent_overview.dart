@@ -1,6 +1,6 @@
 import 'package:desafio_covid/app/shared/models/continent.dart';
+import 'package:desafio_covid/app/shared/widgets/appbar_continent_overview.dart';
 import 'package:desafio_covid/app/shared/widgets/appbar_no_icon.dart';
-import 'package:desafio_covid/app/shared/widgets/button_return.dart';
 import 'package:desafio_covid/app/shared/widgets/center_error_text.dart';
 import 'package:desafio_covid/app/shared/widgets/tab_continent_details.dart';
 import 'package:desafio_covid/app/shared/widgets/tab_countries_listing.dart';
@@ -25,52 +25,7 @@ class ContinentOverviewPage extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        // TODO: extrair a appbar e tentar adaptá-la a classe NoIconAppBar
-        // TODO: desenhar uma linha de 1px abaixo da tab bar
-        appBar: AppBar(
-          backgroundColor: const Color(0xFFFBFBFD),
-          elevation: 0.0,
-          leadingWidth: 36.0,
-          automaticallyImplyLeading: false,
-          leading: Navigator.canPop(context) ? ReturnButton() : null,
-          title: Text(
-            continent.name.toString(),
-            style: TextStyle(
-              fontFamily: 'Ubuntu',
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-              color: Color(0xFF1E2243),
-            ),
-          ),
-          bottom: TabBar(
-            indicatorColor: Color(0xFF4461C2),
-            indicatorWeight: 4.0,
-            unselectedLabelColor: Color(0xFF969AA8),
-            labelColor: Color(0xFF4461C2),
-            tabs: [
-              Tab(
-                child: Text(
-                  'Detalhes',
-                  style: TextStyle(
-                    fontFamily: 'Ubuntu',
-                    fontStyle: FontStyle.normal,
-                    fontSize: 15.0,
-                  ),
-                ),
-              ),
-              Tab(
-                child: Text(
-                  'Países',
-                  style: TextStyle(
-                    fontFamily: 'Ubuntu',
-                    fontStyle: FontStyle.normal,
-                    fontSize: 15.0,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+        appBar: ContinentOverviewAppBar(continent: continent),
         body: TabBarView(
           children: [
             ContinentDetailsTab(
