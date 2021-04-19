@@ -32,7 +32,6 @@ class CountriesListingProvider with ChangeNotifier {
       filteredList.addAll(fullList);
     }
 
-    notifyListeners();
     return filteredList;
   }
 
