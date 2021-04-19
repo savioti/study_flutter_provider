@@ -1,4 +1,5 @@
 import 'package:desafio_covid/app/shared/models/country.dart';
+import 'package:desafio_covid/app/shared/widgets/appbar_no_icon.dart';
 import 'package:desafio_covid/app/shared/widgets/button_return.dart';
 import 'package:desafio_covid/app/shared/widgets/center_country_details.dart';
 import 'package:dio/dio.dart';
@@ -24,23 +25,8 @@ class CountryDetailsPage extends StatelessWidget {
     final String countryName = ModalRoute.of(context).settings.arguments;
 
     return Scaffold(
-        // TODO: extrair a appbar e tentar adaptá-la a classe NoIconAppBar
-        // TODO: desenhar uma linha de 1px abaixo da tab bar
-        appBar: AppBar(
-          backgroundColor: const Color(0xFFFBFBFD),
-          elevation: 0.0,
-          leadingWidth: 36.0,
-          automaticallyImplyLeading: false,
-          leading: Navigator.canPop(context) ? ReturnButton() : null,
-          title: Text(
-            countryName,
-            style: TextStyle(
-              fontFamily: 'Ubuntu',
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-              color: Color(0xFF1E2243),
-            ),
-          ),
+        appBar: NoIconAppBar(
+          title: countryName,
         ),
         body: FutureBuilder<Country>(
           future: _httpGet(countryName),
