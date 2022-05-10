@@ -1,3 +1,1 @@
-# Desafio Covid
-
-Projeto realizado para o bootcamp da Squadra.
+# COVID API app with Provider state management
